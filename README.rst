@@ -2,6 +2,10 @@
 scrapy-rss-exporter
 ===================
 
+.. image:: https://img.shields.io/pypi/v/scrapy-rss-exporter.svg
+   :target: https://pypi.python.org/pypi/scrapy-rss-exporter
+   :alt: PyPI Version
+
 Generate an RSS feed using the `Scrapy <https://scrapy.org/>`_ framework.
 
 Table of Contents
