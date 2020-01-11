@@ -5,7 +5,7 @@ with open('README.rst') as readme:
 
 setup(
     name = 'scrapy-rss-exporter',
-    version = '0.1',
+    version = '0.2',
     author = 'Lukasz Janyst',
     author_email = 'xyz@jany.st',
     url = 'https://github.com/ljanyst/scrapy-rss-exporter',
