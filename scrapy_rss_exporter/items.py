@@ -29,3 +29,4 @@ class RssItem(scrapy.Item):
     description = scrapy.Field()
     pub_date = scrapy.Field(serializer=date_serializer)
     enclosure = scrapy.Field()
+    content = scrapy.Field()

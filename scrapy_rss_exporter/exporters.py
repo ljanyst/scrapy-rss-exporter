@@ -61,6 +61,12 @@ class RssItemExporter(XmlItemExporter):
                     self.xg.startElement('enclosure', attrs)
                     self.xg.endElement('enclosure')
                     self._beautify_newline()
+            elif k == 'content':
+                self._beautify_indent(depth = 3)
+                self.xg.startElement('content:encoded', {})
+                self.xg.ignorableWhitespace(v)
+                self.xg.endElement('content:encoded')
+                self._beautify_newline()
             else:
                 self._export_xml_field(k, v, 3)
         self._beautify_indent(2)
