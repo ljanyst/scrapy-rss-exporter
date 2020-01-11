@@ -30,7 +30,13 @@ class RssItemExporter(XmlItemExporter):
     #---------------------------------------------------------------------------
     def start_exporting(self):
         self.xg.startDocument()
-        self.xg.startElement(self.root_element, {'version': '2.0'})
+        self.xg.startElement(self.root_element, {
+            'version': '2.0',
+            'xmlns:atom': 'http://www.w3.org/2005/Atom',
+            'xmlns:content': 'http://purl.org/rss/1.0/modules/content/',
+            'xmlns:dc': 'http://purl.org/dc/elements/1.1/',
+            'xmlns:media': 'http://search.yahoo.com/mrss/',
+        })
         self._beautify_newline()
         self._beautify_indent(1)
         self.xg.startElement(self.channel_element, {})
